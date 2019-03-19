@@ -1,0 +1,9 @@
+.container{
+  width: 70%;
+  margin: 10px auto;
+  display: flex;
+}
+
+h1{
+  font-size: 400%;
+} 
