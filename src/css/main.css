@@ -1,7 +1,7 @@
 .container{
   width: 70%;
   margin: 10px auto;
-  display: flex;
+  height: 50vh;
 }
 
 h1{
