@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PATHS = { // helps us to manage frequently used strings
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../public'),
-  assets: 'assets/'
+  assets: 'assets'
 };
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
     app: PATHS.src // webpack will find index.js automatically
   },
   output: {
-    filename: `${PATHS.assets}js/[name].js`, //gets name from entry key 
+    filename: `${PATHS.assets}/js/[name].js`, //gets name from entry key 
     path: PATHS.dist, 
     publicPath: '/' //for our devServer
   },
@@ -59,7 +59,7 @@ module.exports = {
   
   plugins: [
     new MiniCssExtractPlugin({ //register plugin
-      filename: `${PATHS.assets}css/[name].css`
+      filename: `${PATHS.assets}/css/[name].css`
     }),
     new HtmlWebpackPlugin({
       hash: false, //disable hash
@@ -67,7 +67,7 @@ module.exports = {
       filename: './index.html'
     }),
     new CopyWebpackPlugin([
-      {from: `${PATHS.src}/img`, to:`${PATHS.assets}img`},
+      {from: `${PATHS.src}/img`, to:`${PATHS.assets}/img`},
       {from: `${PATHS.src}/static`, to: ''}
     ])
   ],
